@@ -1,0 +1,3 @@
+[submodule "weenote"]
+	path = weenote
+	url = git://github.com/jed/weenote.git
