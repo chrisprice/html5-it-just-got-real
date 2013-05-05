@@ -14,9 +14,17 @@
       white-space: nowrap;
     }
 
+    .l {
+      text-align: left;
+    }
+
     a, i {
       color: #C00;
       font-style: normal;
+    }
+
+    b {
+      visibility: hidden;
     }
 
     a {
@@ -44,30 +52,56 @@
   </style>
 </head>
 <body>
+<!--
+
+vendor prefixes, how do i solve them, oh there's this new cool thing called css-pre-processors, let's pick Less or maybe Sass...
+
+we definitely need some streaming in there, the figures only update once a minute but what the hey, let's use web sockets
+
+diagram for frameworks, show scatter gun approach
+
+-->
 <div>HTML5</div>
-<!---->
-<div>The last decision...</div>
-<!---->
-<div>Or the <i>first</i>?</div>
-<!---->
-<div>Let's start coding</div>
+<!--
+My name is...,
+In case the last slide didin't make clear I'm very much into HTML5
+I've been making webapps for 6 years, which as Colin introduced, given the pace of the web is an eternity
+We've all seen applets come and go, plugins have largely come and gone
+And we've also seen our share of buzzwords come and go, AJAX, RIA, Web2.0 and now HTML5
+I'm going to talk about what HTML5 really is but first I want to tell a little story
+-->
+<div>Chris Price</div>
+<!--
+A quick aside before I start, I'm shamelessly ripping off a presentation format and slide generator by Jed Schmidt
+which I first saw at the Reject.js conference. You should check it out at -->
+<div>weenote - Jed Schmidt<br/><a href="http://github.com/jed/weenote">github.com/jed/weenote</a></div>
+<!--About a typical approach to HTML5 apps that I've witnessed-->
+<div>HTML5</div>
+<div>Let's start coding!</div>
 <!---->
 <div>Server</div>
 <!---->
 <div>C#<br/>ASP.NET MVC</div>
 <!---->
 <div>Java<br/>Spring MVC</div>
-<!---->
-<div>HTML(5!)</div>
 <!-- Server generate the HTML5, send it down to the browser-->
+<div>&lt;header&gt;</div>
+<div>&lt;footer&gt;</div>
+<div>&lt;article&gt;</div>
+<div>&lt;nav<b> data-a="b"&gt;</b></div>
+<div>&lt;nav data-a="b"&gt;</div>
 <div><i>IE&lt;8</i></div>
+<div>&lt;!doctype html&gt;</div>
 <!--they render blank-->
 <div></div>
 <!-- Hang on, no support...-->
-<div>html5shiv</div>
+<div class="l">&lt;!--[if lt IE 9]&gt;<br/>&lt;script src="html5shiv.js"&gt;&lt;/script&gt;<br/>&lt;![endif]--&gt;</div>
 <!--that leads nicely onto javascript-->
 <div>JavaScript</div>
-<!---->
+<!--Everybody's favourite language, which is close enough to c#/Java that we can just start coding.
+I've also heard that MV* frameworks are great so we should use one of those
+-->
+<div><i>Java</i>Script</div>
 <div>MVC</div>
 <!---->
 <div>Backbone</div>
@@ -90,7 +124,7 @@
 <!-- There's an awful lot of them, they look pretty complicated. We probably don't need one, let's stick with-->
 <div>jQuery</div>
 <!-- We can always write our own if we need it.-->
-<div>CSS(3!)</div>
+<div>CSS<i>3</i></div>
 <!---->
 <div>
   <div style="padding: 100px; margin:100px; border: 10px solid white;border-radius: 100px;">Rounded<br/>Corners</div>
@@ -106,6 +140,7 @@
 <div><i>CSS vendor pre-fixes</i></div>
 <!---->
 <div>Less</div>
+<div>SaSS</div>
 <!---->
 <div>
   <div class="animate"
@@ -118,7 +153,7 @@
 <!---->
 <div>&...</div>
 <!--It obviously wouldn't be an HTML5 app if it didn't use...-->
-<div>Canvas</div>
+<div>&lt;canvas&gt;</div>
 <!-- backported to -->
 <div><i>IE&lt;8</i></div>
 <!---->
@@ -128,15 +163,23 @@
 <!---->
 <div>Raphael.js</div>
 <!---->
-<div>Raphael.js</div>
-<!---->
 <div>Test...</div>
+<div>// <i>TODO</i>: add tests</div>
 <!---->
 <div>Package...</div>
+<div>// <i>TODO</i>: use minified versions</div>
 <!---->
-<div>Desktop<br/>&#x2611;</div>
+<div>
+  Desktop <span style="color:#66CC66">&#x2611;</span><br/>
+  <b>Mobile ?</b><br/>
+  <b>Tablet</b>
+</div>
 <!---->
-<div>Mobile<br/>?</div>
+<div>
+  Desktop <span style="color:#66CC66">&#x2611;</span><br/>
+  Mobile ?<br/>
+  <b>Tablet</b>
+</div>
 <!---->
 <div>Responsive<br/>Design</div>
 <!---->
@@ -146,11 +189,23 @@
 <!---->
 <div>For different screen sizes</div>
 <!---->
-<div>Desktop<br/>&#x2611;</div>
+<div>
+  Desktop <span style="color:#66CC66">&#x2611;</span><br/>
+  <b>Mobile <span style="color:#66CC66">&#x2611;</span></b><br/>
+  <b>Tablet <span style="color:#66CC66">&#x2611;</span></b>
+</div>
 <!---->
-<div>Mobile<br/>&#x2611;</div>
+<div>
+  Desktop <span style="color:#66CC66">&#x2611;</span><br/>
+  Mobile <span style="color:#66CC66">&#x2611;</span><br/>
+  <b>Tablet <span style="color:#66CC66">&#x2611;</span></b>
+</div>
 <!---->
-<div>Tablet<br/>&#x2611;</div>
+<div>
+  Desktop <span style="color:#66CC66">&#x2611;</span><br/>
+  Mobile <span style="color:#66CC66">&#x2611;</span><br/>
+  Tablet <span style="color:#66CC66">&#x2611;</span>
+</div>
 <!---->
 <div>Usability?</div>
 <!--Controls/interface doesn't work on a smaller device/touch-->
@@ -163,18 +218,32 @@
 <!-- HTML5 certainly hasn't solved the cross browser problems of the past, web development is in many ways as hard/painfull as it always was... -->
 <div>this['Android 2.3'] = new IE6</div>
 <!---->
-<div>So, what is HTML5?</div>
+<div>So, <i>what is</i> HTML5?</div>
 <!-- So if nothing's really changed, just what is HTML5? My definition ...-->
-<div>Browsers host apps</div>
+<div class="l">
+  Browsers <i>are</i> hosting apps<br/>
+  <b>Apps <i>will</i> be easier to create</b><br/>
+  <b>Apps <i>will</i> be more powerful</b>
+</div>
 <!-- 1. A universal acceptance that browsers can and will host apps, 2. A standards process to ensure that in the future those apps will-->
-<div>Apps <i>will</i> be easier to create</div>
+<div class="l">
+  Browsers <i>are</i> hosting apps<br/>
+  Apps <i>will</i> be easier to create<br/>
+  <b>Apps <i>will</i> be more powerful</b>
+</div>
 <!-- a. Be easier to write -->
-<div>Apps <i>will</i> be more powerfull</div>
+<div class="l">
+  Browsers <i>are</i> hosting apps<br/>
+  Apps <i>will</i> be easier to create<br/>
+  Apps <i>will</i> be more powerful
+</div>
 <!-- b. Have access to more functionality -->
+<div><i>will?</i></div>
 <div>So, there's nothing new?</div>
 <!-- That's a lot of wills, is there nothing now?-->
 <div>No, there's <i>loads</i> of new stuff!</div>
 <!-- I name checked at the start a tiny fraction of the frameworks, shims and tools that have been developed in the last few years. Everyone wants to write those HTML5 apps now, -->
+<div>Everyone (+ &#x1f415;)</div>
 <div>Everyone (+ dog)</div>
 <!-- and everyone (and their dog) has written frameworks, shims and tools to make that happen. That means that there's a massive variation in -->
 <div>Quality</div>
@@ -214,14 +283,10 @@ This is often forgotten on the web, people write a huge variation of content for
 <div>Neither...</div>
 <!-- They both have their place, it depends on the nature of the content and the expected user interaction. And it's better to look at it as-->
 
-<div>App --- Site<br/><i>continuum</i></div>
+<div>Site &#x2192; App<br/><i>continuum</i></div>
 <!-- a continuum!  -->
 <div>All projects exist<br/><i>somewhere</i><br/> on the continuum</div>
 <!-- And all HTML5 projects fit somewhere along it, wikipedia, Twitter. -->
-<div>App --- Site<br/>^&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>Docs</div><!--Push channel, client rendering -->
-<div>App --- Site<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br/>BBC News</div>
-<div>App --- Site<br/>&nbsp;&nbsp;^<br/>Wikipedia</div>
-<div>App --- Site<br/>^&nbsp;&nbsp;&nbsp;<br/>Twitter</div>
 <div>Unique to HTML5</div>
 <!-- ... not in c#, not in java, came about because of the webs history, an app environment born out of a linked document environment. I think that's cool -->
 <div>So...</div>
@@ -233,10 +298,7 @@ So as the community has developed frameworks, shims and tools to help with these
 to be most effective in one specific range on the continuum.-->
 <div>Analyse <i>your</i><br/>project</div>
 <!--So it follows that by identifying where your project sites on the continuum you can get a better idea of what's an appropriate choice.-->
-<div>jQuery</div>
-<div>Bootstrap</div>
-<div>GWT</div>
-<div>TypeScript</div>
+<div><a href="https://www.dropbox.com/s/1e5zvpx1siirum7/HTML5.pdf" style="color:cornflowerblue">Framework Requirements</a></div>
 <!---->
 <div>Time saving <br/> Productivity boosting<br/> Frameworks<br/> & Tools</div>
 <div><i>When used within<br/> their comfort zone</i></div>
@@ -244,6 +306,7 @@ to be most effective in one specific range on the continuum.-->
 <div>Outside of that range, they will work but at a cost...</div>
 <!--Javascript massive lack of structure, dynamic nature, can work for jquery, can work against shit loads of code.
 Google docs does not use jquery/bbc news does not sure Closure-->
+<div>HTML5</div>
 <div>3 x Conclusions<br/>+ 1 x <i>Disclaimer</i></div>
 <div>Don't just start coding</div>
 <!--Don't pick framework based on it's Google ranking -->
@@ -254,6 +317,17 @@ Google docs does not use jquery/bbc news does not sure Closure-->
 <div>Disclaimer</div>
 <!--There is one further axis to the continuum which tends to skew the results. -->
 <div>Scale</div>
+<div>Where from here?</div>
+<div>
+  <a href="http://todomvc.com">TodoMVC</a><br/>
+  (Soon to be TasteJS)
+</div>
+<div>
+  <i>Don't</i> make a Todo app!
+</div>
+<div>
+  <a href="http://yeoman.io">Yeoman</a>
+</div>
 <!--For instance, all of the projects I've named
 are massive internet properties, which have very demanding performance, reliability and scalability needs. They are also the result of
 huge investment, are worked on by large teams and are likely to be maintained for a long time to come.
@@ -263,6 +337,7 @@ huge investment, are worked on by large teams and are likely to be maintained fo
 Contrasted to many enterprise sites, where the requirements are often far less demanding, the teams are often a lot smaller and therefore the costs are a lot lower.
 Other smaller sites also differ, where they may be developed by an individual and may just as often be re-written as maintained.
 -->
+<div>Chris Price<br/><a href="http://scottlogic.co.uk/blog/chris">scottlogic.co.uk/blog/chris</a></div>
 </body>
 </html>
 
