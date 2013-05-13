@@ -19,7 +19,7 @@
     }
 
     .chapter {
-        -webkit-transform: rotate(-30deg);
+        -webkit-transform: rotate(-25deg);
     }
 
     small {
@@ -321,6 +321,7 @@ I've also heard that MV* frameworks are great so we should use one of those
 <!--Smooth as silk on the desktop, incredibly slow on iOS, Android painfull-->
 <div>Look and feel?</div>
 <!--Differs from browser to browser, platform to platform  still no pixel perfect rendering, but then isn't that what the web has always been about.-->
+<div>Maintainability?</div>
 <div><i>WOAH!</i></div>
 <!-- HTML5 certainly hasn't solved the cross browser problems of the past, web development is in many ways as hard/painfull as it always was... -->
 <div class="chapter">HTML5<small>My Definition</small></div>
@@ -362,7 +363,7 @@ I've also heard that MV* frameworks are great so we should use one of those
 
 This is often forgotten on the web, people write a huge variation of content for the web designed to fulfill very different purposes. -->
 
-<div class="chapter">HTML5<small>Sites/Apps</small></div>
+<div class="chapter">HTML5<small>Understanding what you're building</small></div>
 <!-- Content-focused, the traditional web - a sprinkling of JavaScript glue code and the odd jQuery snippet -->
 <div>Sites</div>
 <!-- Interactivity/productivity focused, commonly associated with Google e.g. the classic example gmail, now docs and
@@ -436,33 +437,36 @@ G+ although that's a bit of a strange one -->
         </tr>
     </table>
 </div>
+<div>So, which is better?</div>
 <div>Neither...</div>
 <!-- They both have their place, it depends on the nature of the content and the expected user interaction. And it's better to look at it as-->
 
 <div>Sites &#x2192; Apps<br/><i>continuum</i></div>
 <!-- a continuum!  -->
-<div>Unique to HTML5</div>
-<!-- ... not in c#, not in java, came about because of the webs history, an app environment born out of a linked document environment. I think that's cool -->
 <div>All projects exist<br/><i>somewhere</i><br/> on the continuum</div>
 <!-- And all HTML5 projects fit somewhere along it, wikipedia, Twitter. -->
 <!--
 In the same way that there were user perceivable differences, there are also different technical and architectural challenges at every point along the continuum.
 So as the community has developed frameworks, shims and tools to help with these challenges in their own projects, it follows they've been developed
 to be most effective in one specific range on the continuum.-->
-<div>Tools, techniques and frameworks vary along the contiuum</div>
-<div>There is no one-size fits all approach that works for every project</div>
+<!--<div>Tools, techniques and frameworks vary along the contiuum</div>
+<div>There is no one-size fits all approach that works for every project</div>-->
 <div>Analyse <i>your</i><br/>project</div>
-<div>Choose the right approach for <i>you</i></div>
+<div>Choose the right<br/>approach for <i>you</i></div>
 <!--...but don't corner yourself.-->
 <div class="chapter">HTML5<small>Tools, techniques and frameworks</small></div>
-<div>
-    These were all baked into things like Flex, Silverlight, WPF etc..
-    MVC (208) - Angular, Backbone, Dojo, Ember, Knockout, YUI, ...
-    Template (868) - Mustache, Handlebars, Dust, Hogan, Closure, ...
-    Test (1403) - jsUnit, qUnit, Jasmine, Mocha, ...
-    Test Runner (110) - Node, Rhino, Phantom, jsTestDriver, ...
-    Modularisation - RequireJS, CommonJS (Browserify), Closure, ...
-    Optimisation - Closure, Uglifyjs, YUI, CSSmin, ...
+<div>Unique to HTML5</div>
+<!-- ... not in c#, not in java, came about because of the webs history, an app environment born out of a linked document environment. I think that's cool -->
+<div class="l">
+    <ul>
+    <!--These were all baked into things like Flex, Silverlight, WPF etc..-->
+        <li>MVC (208) - Angular, Backbone, Dojo, Ember, Knockout, YUI, ...
+        <li>Template (868) - Mustache, Handlebars, Dust, Hogan, Closure, ...
+        <li>Test (1403) - jsUnit, qUnit, Jasmine, Mocha, ...
+        <li>Test Runner (110) - Node, Rhino, Phantom, jsTestDriver, ...
+        <li>Modularisation - RequireJS, CommonJS (Browserify), Closure, ...
+        <li>Optimisation - Closure, Uglifyjs, YUI, CSSmin, ...
+    </ul>
 </div>
 
 <!--So it follows that by identifying where your project sites on the continuum you can get a better idea of what's an appropriate choice.
